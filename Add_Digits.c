@@ -1,22 +1,23 @@
 #include<stdio.h>
-int digits(int num)
+int add_digits(int n)
 {
-    int r,res=0;
-    while(num>0)
-    {
-        r=num%10;
-        res+=r;
-        num=num/10;
-    }
-    return res;
+    int sum=0,r;
+    if(n<10)
+        return n;
+    else{
+        while(n>0)
+        {
+            r=n%10;
+            sum+=r;
+            n=n/10;
+        }
+        return add_digits(sum);
+    }    
 }
 int main()
 {
-    int n;
+    int n,k;
     scanf("%d",&n);
-    while(n>9)
-    {
-        n=digits(n);
-    }
-    printf("%d",n);
+    k=add_digits(n);
+    printf("%d",k);
 }
