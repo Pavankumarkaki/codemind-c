@@ -1,21 +1,14 @@
 #include<stdio.h>
-int sumdiv (int num)
+int  main()
 {
-    int sum=0,i;
-    for(i=1;i<=num/2;i++)
-    {
-        if(num%i==0)
-        {
-            sum+=i;
-        }
-    }
-    return sum;
-}
-int main()
-{
-    int n;
+    int n,sum=0;
     scanf("%d",&n);
-    if(n==sumdiv(n))
+    for(int i=1;i<n;i++)
+    {
+        if(n%i==0)
+        sum+=i;
+    }
+    if(sum==n)
     printf("True");
     else
     printf("False");
