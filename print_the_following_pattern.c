@@ -6,16 +6,9 @@ int main()
     int i,j;
     for(i=1;i<=n;i++)
     {
-        for(j=1;j<=n;j++)
+        for(j=1;j<=i;j++)
         {
-            if(i==j)
-            {
-                printf("0");
-            }
-            else
-            {
-                printf("x");
-            }
+            printf("%d",j);
         }
         printf("
 ");
