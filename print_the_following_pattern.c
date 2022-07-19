@@ -1,14 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    char s[]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int n,i,j;
     scanf("%d",&n);
-    for(i=0;i<n;i++)
+    for(i=1;i<=n;i++)
     {
-        for(j=0;j<n;j++)
+        for(j=1;j<=n;j++)
         {
-            printf("%c ",s[i]);
+            if(j==i || j==(n+1)-i)
+            {
+                printf("x");
+            }
+            else
+            {
+                printf("0");
+            }
         }
         printf("
 ");
